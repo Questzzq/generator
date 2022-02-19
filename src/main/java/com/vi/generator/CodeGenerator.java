@@ -37,7 +37,7 @@ public class CodeGenerator {
                                     path + "/src/main/resources/mapper")); // 设置mapperXml生成路径;
                 })
                 .strategyConfig(builder -> {
-                    builder.addInclude("t_user") // 配置要生成的表名，可传入一个List
+                    builder.addInclude("t_goods", "t_order", "t_seckill_goods", "t_seckill_order") // 配置要生成的表名，可传入一个List
                             .addTablePrefix("t_") // 过滤表名前缀
                             .serviceBuilder()
                             .formatServiceFileName("%sService") // service类名，%s适配，根据表名替换
